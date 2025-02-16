@@ -5,28 +5,34 @@
 }
 
 /* CSS Flexbox for nav bar*/
-nav {
-    position: fixed;
+.navbar {
+    /* position: fixed; */
     display: flex;
     align-items: center;
     background-color: #FFF0F5;
+    justify-content: space-around;
     padding: 0.5em, 1em;
     font-size: 1.2em;
 }
 
 .logo {
-    max-width: 50px;
+    max-width: 3em;
     margin-right: 1rem;
 }
 
-nav ul {
+.navbar h1 {
+    margin-right: auto;
+}
+
+.nav-menu {
     display: flex;
     list-style-type: none;
     gap: 1rem; 
     justify-content: center;
+    padding-right: 2em;
 }
 
-nav li a {
+.nav-menu li a {
     text-decoration: none;
     padding: 0.5em 1em;
     color: #333;
@@ -34,9 +40,30 @@ nav li a {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-nav li a:hover {
+.nav-menu li a:hover {
     background-color: #FBAED2;
     transform: scale(1.05);
+}
+
+.menu-icon{
+    display: none;
+    cursor: pointer;
+    width: 1.5em;
+    height: 1em;
+    position: relative;
+    padding-right: 2em;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.3s;
 }
 
 body{
@@ -47,6 +74,7 @@ body{
 
 main{
     display: flex;
+    flex-direction: row;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -103,6 +131,62 @@ main{
     }
     100%{
         border-color: transparent;
+    }
+}
+
+/* Media Queries for MOBILE */
+@media (max-width: 950px) {
+    .menu-icon{
+        display: block;
+    }
+
+    .nav-menu{
+        display: none;
+        position: absolute;
+        background-color: #FBAED2;
+        top: 3.5em;
+        right: 2em;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        padding: 1em
+    }
+
+    .nav-menu li{
+        margin: 0.5em 0;
+    }
+    .nav-menu li a:hover{
+        margin: 0.5em 0;
+        color:#FFF0F5;
+    }
+
+    #menu-toggle:checked ~ .nav-menu {
+     display: flex; 
+    }
+    
+    #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    .left {
+        flex: 0 0 auto;
+        width: auto;
+    }
+
+    .right {
+        flex: 0 0 auto;
+        padding: 2em;
     }
 }
 
