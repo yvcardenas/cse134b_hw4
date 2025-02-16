@@ -182,6 +182,7 @@ main{
     .left {
         flex: 0 0 auto;
         width: auto;
+        padding: 1em;
     }
 
     .right {
