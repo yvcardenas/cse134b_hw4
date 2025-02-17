@@ -77,6 +77,7 @@ main{
 }
 
 @scope (main > section) {
+
     h2{
         text-align: center;
         font-size: 3em;
@@ -87,7 +88,7 @@ main{
     ul {
         list-style: none; 
         padding: 2em;
-        margin: 0 auto; 
+        margin: 1em;
         
         display: grid;
         gap: 1rem;
@@ -190,6 +191,25 @@ main{
 
     main{
         flex-direction: column;
+    }
+
+    @scope(main > section){
+        h2{
+            font-size: 2em;
+        }
+
+        ul{
+            grid-template-columns: 1fr;
+            padding: 1em;
+        }
+
+        h3{
+            font-size: 1.5em;
+        }
+
+        .project-details h3{
+            font-size: 1.2em;
+        }
     }
 }
 
