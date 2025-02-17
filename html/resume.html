@@ -4,8 +4,12 @@
         <title>Resume</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/resume.css">
-        
+        <link rel="icon" type="image/png" href="../media/slogoblack.png"/>
+        <link rel="stylesheet" href="../css/resume.css">
+        <!-- Custome Font from Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -22,39 +26,34 @@
                 </label>
 
                 <ul class="nav-menu"> 
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="/html/about.html">About Me</a></li>
-                    <li><a href="/html/projects.html">Projects</a></li>
-                    <li><a href="/html/resume.html">Resume</a></li>
-                    <li><a href="/html/contact.html">Contact Me</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section>
-                <h2>Resume</h2>
-                <a href="./media/yvanna_cardenas_resume_2025.pdf" download="yvanna_cardenas_resume_2025">Click here to download my resume</a>
+            <section class="title">
+                <h1>Resume</h1>
             </section>
 
-            <section>
+            <section class="education">
                 <h2>Education</h2>
                 <p><strong>University of California San Diego</strong> – La Jolla, CA<br>Computer Science Bachelor's | Expected Graduation: June 2026</p>
+                <p><strong>MiraCosta Community College</strong> – Oceanside, CA<br>Computer Science Associate's | Mathematics Associate's | Graduated: May 2023</p>
                 <p><strong>Relevant Coursework:</strong> Discrete Structures, Linear Algebra, Computer Architecture and Assembly Language, Data Structures/Algorithms, Software Engineering</p>
             </section>
         
-            <section>
+            <section class="skills">
                 <h2>Skills</h2>
                 <div>
                     <table>
-                        <caption>Technical Skills</caption>
                         <colgroup>
-                            <col style="background-color: #f0f0f0;">
-                            <col style="background-color: #e6e6e6;">
+                            <col style="background-color: #eee;">
+                            <col style="background-color: #fff;">
                         </colgroup>
-                        <tr>
-                            <th>Category</th>
-                            <th>Details</th>
-                        </tr>
                         <tr>
                             <td><strong>Programming Languages</strong></td>
                             <td>C++, Python, Java, HTML, CSS</td>
@@ -79,10 +78,10 @@
                 </div>
             </section>
 
-            <section>
+            <section class="experience">
                 <h2>Experience</h2>
                 <div>
-                    <h3>Software Engineering Course | Team Lead</h3>
+                    <h3>Project Lead</h3>
                     <p><strong>Location:</strong> La Jolla, CA | April 2024 - June 2024</p>
                     <p>Led a team of 10 to design and develop a web application using agile methodologies. Facilitated meetings, managed project progress, delegated tasks, addressed risks, and ensured clear communication. Delivered the project on time, meeting all milestones.</p>
                 </div>
@@ -92,6 +91,13 @@
                     <p><strong>Location:</strong> Madrid, Spain | June 2024 - August 2024</p>
                     <p>Collaborated with the CEO to analyze and optimize the scalability of the company's data structure. Used Python, pandas, and MongoDB to improve data retrieval and organization processes, providing strategic recommendations to enhance data efficiency.</p>
                 </div>
+            </section>
+
+            <section class="resumelinked">
+                <h3>To download PDF version of my resume click the button below:</h3>
+                <a href="../media/yvanna_cardenas_resume_2025.pdf" download="ycardenas_resume">
+                    <button type="button" h>Click Me!</button>
+                </a>
             </section>
         </main>
         <footer>
