@@ -114,11 +114,34 @@ body{
         border: 1px solid #ddd;
         border-radius: 0.5em;
         box-sizing: border-box;
+        font-family: var(--main-font, Times, serif);
+    }
+
+    /* HTML and CSS ONLY Validation */
+    input:required, textarea:required {
+        border-left: 4px solid; 
+    }
+
+    input:valid, textarea:valid{
+        border-color: #006400;
+    }
+
+    input:invalid, textarea:invalid{
+        border-color: #B00020;
+    }
+
+    input::placeholder, textarea::placeholder{
+        font-style: italic;
+        color: #888;
+    }
+
+    input:focus, textarea:focus{
+        outline: none;
+        border-color: #007bff;
     }
 
     .required{
         color: red;
-        font-size: 1rem;
     }
 
     textarea{
@@ -134,7 +157,6 @@ body{
         cursor: pointer;
         width: 100%;
         transition: background-color 0.3s ease;
-        /* margin-bottom: 2rem; */
         font-family: var(--main-font, Times, serif);
     }
 
