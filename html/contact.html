@@ -32,47 +32,51 @@
             </nav>
         </header>
         <main>
-            <section class="title">
+             <!-- HW4: Add a Contact Form with Name, Email and Comments. Direct to httpbin.org and have a hidden possible_bot = true. -->
+            <section class="contact-form-container">
                 <h2>Let's Connect! </h2>
+                <p>I am open to discussing opportunities, sharing ideas, or just talking about how technology will shape the future.</p>
+                <form action="https://httpbin.org/post" method="POST">
+                    <input type="hidden" name="possible_bot" value="true">
+                    <div class="form-field">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="firstname" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lastname" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="comments">Comments:</label>
+                        <textarea type="message" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="sumbit-button">Send Message!</button>
+
+                    <!-- Output Elements -->
+                    <output id="errorOutput" class="error-message" aria-live="polite"></output>
+                    <output id="infoOutput" class="info-message" aria-live="polite"></output>
+                </form>
+                <div class="links">
+                    <a href="https://github.com/yvcardenas" target="_blank">
+                        <img src="../media/githublogo.png" alt="GitHub Logo" class="contact-logo">
+                    </a>
+    
+                    <a href="https://www.linkedin.com/in/y-cardenas/" target="_blank">
+                        <img src="../media/linkedinlogo.png" alt="LinkedIn Logo" class="contact-logo">
+                    </a>
+    
+                    <a href="mailto:yvcardenas@ucsd.edu" target="_blank">
+                        <img src="../media/emaillogo.png" alt="Email Logo" class="contact-logo">
+                    </a>
+                </div>
             </section>
-
-            <section class="message">
-                <p>
-                    I am open to discussing opportunities, sharing ideas, or just talking about how technology will shape the future.
-                </p>
-            </section>
-
-            <div class="links">
-                <a href="https://github.com/yvcardenas" target="_blank">
-                    <img src="../media/githublogo.png" alt="GitHub Logo" class="contact-logo">
-                </a>
-
-                <a href="https://www.linkedin.com/in/y-cardenas/" target="_blank">
-                    <img src="../media/linkedinlogo.png" alt="LinkedIn Logo" class="contact-logo">
-                </a>
-
-                <a href="mailto:yvcardenas@ucsd.edu" target="_blank">
-                    <img src="../media/emaillogo.png" alt="Email Logo" class="contact-logo">
-                </a>
-            </div>
         </main>
         <footer>
             <p>&copy; 2025 Yvanna Cardenas</p>
         </footer>
     </body>
 </html>
-<!-- <form action="#" method="post">
-                    <fieldset>
-                        <legend>Get in Touch</legend>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                        <br>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                        <br>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <br>
-                        <button type="submit">Send</button>
-                    </fieldset>
-                </form> -->
