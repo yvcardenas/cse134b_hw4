@@ -1,0 +1,73 @@
+:root {
+    --main-bg-color: #FFF0F5;
+    --accent-color: #FBAED2;
+    --main-font: "Cormorant Garamond", "Times New Roman", Times, serif;
+}
+
+/* CSS Flexbox for nav bar*/
+.navbar {
+    /* position: fixed; */
+    display: flex;
+    align-items: center;
+    background-color: #FFF0F5;
+    justify-content: space-around;
+    padding: 0.5em, 1em;
+    font-size: 1.2em;
+}
+
+.logo {
+    max-width: 3em;
+    margin-right: 1rem;
+}
+
+.navbar h1 {
+    margin-right: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem; 
+    justify-content: center;
+    padding-right: 2em;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-menu li a:hover {
+    background-color: #FBAED2;
+    transform: scale(1.05);
+}
+
+.menu-icon{
+    display: none;
+    cursor: pointer;
+    width: 1.5em;
+    height: 1em;
+    position: relative;
+    padding-right: 2em;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+body{
+    background-color: #FFF0F5;
+    background-color: var(--main-bg-color, #FFF0F5);
+    font-family: var(--main-font, Times, serif);
+}
