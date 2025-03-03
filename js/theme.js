@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".js-theme-toggle").style.display = "flex";
+    
     const toggleSwitch = document.getElementById("theme-toggle");
     const toggleIcon = document.querySelector(".toggle-icon");
     const logo = document.getElementById("logo");

@@ -61,6 +61,11 @@
     font-size: 1rem;  
     transition: transform 0.3s;
 }
+
+.js-theme-toggle {
+    display: none;
+}
+
   
 input:checked + .slider {
     background-color: var(--accent-color);
