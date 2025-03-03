@@ -29,7 +29,7 @@ main{
     max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid #333;
+    border-right: 3px solid var(--text-color);
 
     animation:
         typing 3s steps(10) infinite forwards,
@@ -38,7 +38,6 @@ main{
 
     font-size: clamp(3rem, 10vw, 6rem);
     letter-spacing: 2px;
-    color: #333;
 }
 
 @keyframes typing {
@@ -55,7 +54,7 @@ main{
         border-color: transparent;
     }
     50% {
-        border-color: #333;
+        border-color: var(--text-color);
     }
     100%{
         border-color: transparent;
@@ -64,45 +63,6 @@ main{
 
 /* Media Queries for MOBILE */
 @media (max-width: 950px) {
-    .menu-icon{
-        display: block;
-    }
-
-    .nav-menu{
-        display: none;
-        position: absolute;
-        background-color: #FBAED2;
-        top: 3.5em;
-        right: 2em;
-        flex-direction: column;
-        border: 1px solid #ccc;
-        padding: 1em
-    }
-
-    .nav-menu li{
-        margin: 0.5em 0;
-    }
-    .nav-menu li a:hover{
-        margin: 0.5em 0;
-        color:#FFF0F5;
-    }
-
-    #menu-toggle:checked ~ .nav-menu {
-     display: flex; 
-    }
-    
-    #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
-        opacity: 0;
-    }
-
-    #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
     main{
         flex-direction: column;
     }
